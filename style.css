@@ -61,3 +61,63 @@ button:hover{
 button:active{
     transform:scale(.95);
 }
+.hidden{
+    display:none;
+}
+
+#popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.85);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:999;
+}
+
+#popup-content{
+
+    width:70%;
+    max-width:900px;
+
+    background:#001fa8;
+
+    border:5px solid gold;
+
+    border-radius:20px;
+
+    padding:40px;
+
+}
+
+#questionTitle{
+    color:gold;
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+#questionText{
+    font-size:34px;
+    margin-bottom:30px;
+}
+
+#questionImage{
+    max-width:100%;
+    display:none;
+    margin:auto;
+    border-radius:15px;
+}
+
+#questionAudio{
+    width:100%;
+    display:none;
+    margin:20px 0;
+}
+
+#answerText{
+    font-size:32px;
+    color:#00ff66;
+    margin-top:25px;
+}
