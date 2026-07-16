@@ -1,15 +1,36 @@
+const popup = document.getElementById("popup");
+const closeBtn = document.getElementById("closePopup");
+const showAnswer = document.getElementById("showAnswer");
+const answerText = document.getElementById("answerText");
+
 const buttons = document.querySelectorAll("button");
 
-buttons.forEach(button => {
+buttons.forEach(button=>{
 
-    button.addEventListener("click", () => {
+    if(button.id==="showAnswer" || button.id==="closePopup")
+        return;
 
-        alert("🚧 Diese Frage kommt im nächsten Schritt!");
+    button.addEventListener("click",()=>{
 
-        button.disabled = true;
-        button.style.background = "#222";
-        button.style.color = "#666";
+        document.getElementById("questionTitle").innerText="100 Punkte";
+        document.getElementById("questionText").innerText="Hier wird später automatisch die richtige Frage angezeigt.";
+
+        answerText.innerText="";
+
+        popup.classList.remove("hidden");
 
     });
 
 });
+
+showAnswer.onclick=()=>{
+
+    answerText.innerText="Hier erscheint später automatisch die Antwort.";
+
+}
+
+closeBtn.onclick=()=>{
+
+    popup.classList.add("hidden");
+
+}
